@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 import time
 
 # -----------------------------
@@ -15,7 +15,12 @@ st.set_page_config(
 # -----------------------------
 # Load Model
 # -----------------------------
-model = joblib.load("loan_model.pkl")
+@st.cache_resource
+def load_model():
+    with open("loan_model.pkl", "rb") as f:
+        return pickle.load(f)
+
+model = load_model()
 
 # -----------------------------
 # Custom CSS Styling
@@ -107,13 +112,11 @@ with col2:
             probability = model.predict_proba(input_df)[0][1]
             prob_percent = int(probability * 100)
 
-            # Approval Status
             if prediction == 1:
                 st.success("✅ Loan Approved")
             else:
                 st.error("❌ Loan Rejected")
 
-            # Probability Section
             st.write("### 📈 Approval Confidence Score")
             st.write(f"**{prob_percent}%**")
 
@@ -122,9 +125,6 @@ with col2:
                 time.sleep(0.01)
                 progress_bar.progress(i)
 
-            # -----------------------------
-            # Risk Indicator (Column 3)
-            # -----------------------------
             with col3:
                 st.subheader("⚠ Risk Assessment")
 
@@ -141,4 +141,4 @@ with col2:
 # -----------------------------
 # Footer
 # -----------------------------
-st.markdown("<div class='footer'>© 2026 NeuroNerds | AI Powered Loan Risk System</div>", unsafe_allow_html=True)
+st.markdown("<div class='footer'>© 2026 NeuroNerds | AI Powered Loan Risk System</div>", unsafe_allow_html=True) 
