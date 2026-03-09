@@ -130,8 +130,8 @@ User Inputs → Feature Processing → Model Prediction → Approval Decision
 Machine Learning Enthusiast | Aspiring Data Scientist
 
 📬 Contact:
-Email: [itsarnav.singh80@gmail.com](mailto:itsarnav.singh80@gmail.com)
-LinkedIn: [https://www.linkedin.com/in/arnav-singh-a87847351](https://www.linkedin.com/in/arnav-singh-a87847351)
-GitHub: [https://github.com/Arnav-Singh-5080](https://github.com/Arnav-Singh-5080)
+* Email: [itsarnav.singh80@gmail.com](mailto:itsarnav.singh80@gmail.com)
+* LinkedIn: [https://www.linkedin.com/in/arnav-singh-a87847351](https://www.linkedin.com/in/arnav-singh-a87847351)
+* GitHub: [https://github.com/Arnav-Singh-5080](https://github.com/Arnav-Singh-5080)
 
 ---
