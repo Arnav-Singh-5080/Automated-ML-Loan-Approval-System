@@ -127,6 +127,7 @@ User Inputs → Feature Processing → Model Prediction → Approval Decision
 ## 👨‍💻 Author
 
 **Name:** Arnav Singh
+
 **Role:** Machine Learning Enthusiast | Aspiring Data Scientist
 
 📬 **Contact:**
